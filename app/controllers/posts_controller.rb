@@ -4,7 +4,15 @@ class PostsController < ApplicationController
   end
 
   def new
-  	@posts = Post.new
+  	@post = Post.new
+  end
+
+  def show
+  	@post = Post.find(params[:id])
+  end
+
+  def edit
+  	@post = Post.find(params[:id])
   end
 
   def create
@@ -14,11 +22,17 @@ class PostsController < ApplicationController
     	redirect_to @post
   	else
     	render 'new'
+    end
   end
-  end
-  
-  def show
+
+  def update
   	@post = Post.find(params[:id])
+
+  	if @post.update(params[:post].permit(:title, :text))
+  		redirect to @post
+  	else
+  		render 'edit'
+  	end
   end
   
   private
