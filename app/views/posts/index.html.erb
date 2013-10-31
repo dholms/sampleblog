@@ -1,6 +1,6 @@
 <h1>Listing Posts</h1>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to "New Post", new_post_path, type: "button", class: "btn btn-success" %>
 
 <table>
 	<tr>
@@ -12,10 +12,11 @@
 	<tr>
 		<td><%= post.title %></td>
 		<td><%= post.text %></td>
-		<td><%= link_to 'Show', post_path(post) %></td>
-		<td><%= link_to 'Edit', edit_post_path(post) %></td>
-		<td><%= link_to 'Destroy', post_path(post), 
-						method: :delete, data: { confirm: "Are you sure?"} %>
+		<td><%= link_to 'Show', post_path(post), type: "button", class: "btn btn-primary" %></td>
+		<td><%= link_to 'Edit', edit_post_path(post), type: "button", class: "btn btn-warning" %></td>
+		<td><%= link_to 'Destroy', post_path(post),
+						method: :delete, data: { confirm: "Are you sure?"},
+						type: "button", class: "btn btn-danger" %>
 		</td>
 	</tr>
 	<% end %>
