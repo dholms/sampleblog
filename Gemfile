@@ -34,6 +34,8 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'bootstrap-sass'
 
+#gem 'bootswatch-rails'
+
 gem 'jquery-rails'
 
 group :doc do
