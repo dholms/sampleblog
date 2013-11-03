@@ -1,14 +1,11 @@
 <p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
+	<strong><%= comment.commenter %></strong> says,
 </p>
 <p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
+	<em>"<%= comment.body %>"</em>
 </p>
-
 <p>
-  <%= link_to 'Destory Comment', [comment.post, comment],
-  				method: :delete,
-  				data: {confirm: 'Are you sure?' } %>
+	<%= link_to 'Delete', [comment.post, comment],
+					method: :delete, data: { confirm: "Are you sure?"},
+					type: "button", class: "btn btn-mini btn-danger" %>
 </p>
