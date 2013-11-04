@@ -2,14 +2,6 @@
 
 <p>	<%= @post.text %></p>
 
-
-<h3>Comments</h3>
-<%= render @post.comments %>
-
-<h3>Add a comment:</h3>
-<%= render "comments/form" %>
-
-<%= link_to 'Back to Posts', posts_path, type: "button", class: "btn btn-primary" %>
 <!-- Edit button to trigger modal -->
 	<button class="btn btn-warning" data-toggle="modal" data-target="#editModal">
 	  Edit
@@ -37,3 +29,13 @@
 	    </div>
 	  </div>
 	</div>
+<%= link_to 'Delete', post_path(@post),
+						method: :delete, data: { confirm: "Are you sure?"},
+						type: "button", class: "btn btn-danger" %>
+
+<h3>Comments</h3>
+<%= render @post.comments %>
+
+<h3>Add a comment:</h3>
+<%= render "comments/form" %>
+<%= link_to 'Back to Posts', posts_path, type: "button", class: "btn btn-primary" %>
