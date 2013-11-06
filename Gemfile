@@ -38,6 +38,8 @@ gem 'bootstrap-sass'
 
 gem 'jquery-rails'
 
+gem 'angularjs-rails'
+
 gem 'twitter'
 
 group :doc do

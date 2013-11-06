@@ -13,6 +13,8 @@ Sampleblog::Application.routes.draw do
     resources :comments
   end
 
+  get 'tweets/:id' => 'posts#tweets', :as => 'tweets'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
