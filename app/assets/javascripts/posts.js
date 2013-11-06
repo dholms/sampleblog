@@ -1,5 +1,7 @@
 function TermCtrl($scope) {
-  $scope.terms = [];
+  $scope.terms = [
+    {text:'Placeholder1', select:true},
+    {text:'Placeholder2', select:false}];
  
   $scope.addTerm = function() {
     $scope.terms.push({text:$scope.termText, select:false});
