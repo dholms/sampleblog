@@ -20,3 +20,4 @@ function TermCtrl($scope) {
     return count;
   };
 }
+RemindersCtrl.$inject = ['$scope'];

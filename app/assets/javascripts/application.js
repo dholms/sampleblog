@@ -14,8 +14,11 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require turbolinks
-//= require_tree .
 //= require angular
+//= require_tree .
+
+
+Sampleblog = angular.module('Sampleblog', ['ngResource'])
 
 $(document).on('page:load', function() {
   return $('[ng-app]').each(function() {
