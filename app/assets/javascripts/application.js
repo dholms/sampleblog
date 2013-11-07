@@ -17,13 +17,10 @@
 //= require angular
 //= require_tree .
 
-
-var Sampleblog = angular.module('Sampleblog', ['ngResource'])
-
-$(document).on('page:load', function() {
-  return $('[ng-app]').each(function() {
-    var module;
-    module = $(this).attr('ng-app');
-    return angular.bootstrap(this, [module]);
-  });
-});
+// $(document).on('page:load', function() {
+//   return $('[ng-app]').each(function() {
+//     var module;
+//     module = $(this).attr('ng-app');
+//     return angular.bootstrap(this, [module]);
+//   });
+// });

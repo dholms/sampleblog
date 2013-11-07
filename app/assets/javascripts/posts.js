@@ -1,3 +1,5 @@
+var Sampleblog = angular.module('Sampleblog', ['ngResource'])
+
 function TermCtrl($scope) {
 
   //var title = title.split();

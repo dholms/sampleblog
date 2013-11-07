@@ -1,6 +1,11 @@
 <h1>Related Tweets</h1>
 
-<div ng-app>
+<%= @tweets.each do |x| %>
+	<p><strong><%= x.from_user %></strong> says,</p>
+	<p><em>"<%= x.text %>"</em></p>
+<% end %>
+
+<!-- <div ng-app>
 	<div ng-controller="TermCtrl">
       <span>{{remaining()}} of {{terms.length}} selected</span>
       <ul class="unstyled">
@@ -15,6 +20,6 @@
         <input class="btn-primary" type="submit" value="add">
       </form>
     </div>
-</div>
-
+</div> -->
+<br>
 <%= link_to 'Back to Posts', posts_path, type: "button", class: "btn btn-primary" %>
