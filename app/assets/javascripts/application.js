@@ -18,7 +18,7 @@
 //= require_tree .
 
 
-Sampleblog = angular.module('Sampleblog', ['ngResource'])
+var Sampleblog = angular.module('Sampleblog', ['ngResource'])
 
 $(document).on('page:load', function() {
   return $('[ng-app]').each(function() {
