@@ -16,11 +16,3 @@
 //= require turbolinks
 //= require angular
 //= require_tree .
-
-// $(document).on('page:load', function() {
-//   return $('[ng-app]').each(function() {
-//     var module;
-//     module = $(this).attr('ng-app');
-//     return angular.bootstrap(this, [module]);
-//   });
-// });
