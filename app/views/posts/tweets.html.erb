@@ -1,25 +1,10 @@
 <h1>Related Tweets</h1>
 
-<%= @tweets.each do |x| %>
-	<p><strong><%= x.from_user %></strong> says,</p>
-	<p><em>"<%= x.text %>"</em></p>
+<%= @tweets.each do |tweet| %>
+	<p><strong><%= tweet.from_user %></strong> says,</p>
+	<p><em>"<%= tweet.text %>"</em></p>
+	<br>
 <% end %>
 
-<!-- <div ng-app>
-	<div ng-controller="TermCtrl">
-      <span>{{remaining()}} of {{terms.length}} selected</span>
-      <ul class="unstyled">
-        <li ng-repeat="term in terms">
-          <input type="checkbox" ng-model="term.select">
-          <span class="select-{{term.select}}">{{term.text}}</span>
-        </li>
-      </ul>
-      <form ng-submit="addTerm()">
-        <input type="text" ng-model="termText"  size="30"
-               placeholder="add new term here">
-        <input class="btn-primary" type="submit" value="add">
-      </form>
-    </div>
-</div> -->
 <br>
 <%= link_to 'Back to Posts', posts_path, type: "button", class: "btn btn-primary" %>

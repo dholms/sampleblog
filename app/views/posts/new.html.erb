@@ -1,8 +1,6 @@
 <h1>New Post</h1>
 
 <div ng-app>
-<h2>{{Title}}</h2>
-<p>{{Text}}</p>
 <%= form_for @post do |f| %>
   <% if @post.errors.any? %>
   <div id="errorExplanation">
@@ -23,6 +21,9 @@
     <%= f.text_area :text, placeholder: 'Text', :'ng-model' => 'Text' %>
   </p>
 
+  <h2>{{Title}}</h2>
+  <p>{{Text}}</p>	
+  <br>
   <p>
     <%= f.submit 'Submit', class: "btn btn-success" %>
   </p>

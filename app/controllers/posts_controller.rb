@@ -24,7 +24,7 @@ class PostsController < ApplicationController
 
 	def tweets
 		@post = Post.find(params[:id])
-		@tweets = Twitter.search(@post.title, :count => 5, :result_type => "recent").results.map
+		@tweets = Twitter.search("#{@post.title} -rt", :count => 5, :result_type => "recent").results.map
 	end
 
 	def edit

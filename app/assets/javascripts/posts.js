@@ -1,25 +1,13 @@
-var Sampleblog = angular.module('Sampleblog', ['ngResource'])
+// var Sampleblog = angular.module('Sampleblog', ['ngResource'])
 
-function TermCtrl($scope) {
+// function PostCtrl($scope) {
 
-  //var title = title.split();
-  //for (var i=0; i<title.length; i++){};
-    $scope.terms = [
-    {text:'Placeholder1', select:true},
-    {text:'Placeholder2', select:false}];
-  //}
+//   $scope.posts = [{title: 'Title1', text:'Placeholder1'},
+//              {title: 'Title2', text:'Placeholder2'}];
 
-  $scope.addTerm = function() {
-    $scope.terms.push({text:$scope.termText, select:false});
-    $scope.termText = '';
-  };
- 
-  $scope.remaining = function() {
-    var count = 0;
-    angular.forEach($scope.terms, function(term) {
-      count += term.select ? 1 : 0;
-    });
-    return count;
-  };
-}
-TermCtrl.$inject = ['$scope'];
+//   $scope.addPost = function($title, $text) {
+//     $scope.posts.push({title: title, $text: $text});
+//     $scope.postText = '';
+//   };
+// }
+// PostCtrl.$inject = ['$scope'];
